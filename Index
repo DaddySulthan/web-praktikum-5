@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+</head>
+<body style="margin: 200px">
+
+	<center>
+		<form method="REQUEST">
+			Username Anda :<br>
+			<input type="text" placeholder="username anda" id="username anda" name="username anda"><br>
+			Password Anda<br>
+			<input type="password anda"  placeholder="password anda" id="password anda" name="password anda"><br>
+			<button type="submit" onclick="return login()">LOG IN</button>
+		</form>
+	</center>
+
+</body>
+<script type="text/javascript">
+	function login() {
+		username anda = document.getElementById("username anda").value;
+		password anda = document.getElementById("password anda").value;
+
+		if (username anda == "" || password anda == "") {
+			alert("Username atau Password kamu tidak boleh kosong!");
+			return false;
+		}
+		else if (password anda.length < 6) {
+			alert("Password tidak boleh kurang dari 6!");
+			return false;
+		}
+		else if (username anda == "sulthan" && password == "123456789") {
+			window.location = "dashboard.html";
+			return false;
+		}else{
+			alert("Username atau password kamu salah, silahkan coba ulang!");
+		}
+	}
+</script>
+</html>
